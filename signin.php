@@ -14,23 +14,22 @@
             </ul>
         </div>
         <div ng-app ng-init="checked = false">
-            <form class="form-signin" action="" method="post" name="form">
+            <form class="form-signin" action="process/login.php" method="POST" name="form">
 
                 <label for="username">Username</label>
                 <input class="form-styling" type="text" name="username" placeholder="" />
 
                 <label for="password">Password</label>
 
-                <input class="form-styling" type="text" name="password" placeholder="" /> <input type="checkbox"
-                    id="checkbox" />
+                <input class="form-styling" type="password" name="password" placeholder="" /> <input type="checkbox" id="checkbox" />
 
-                <label for="checkbox">
+                <!-- <label for="checkbox">
                     <span class="ui"></span>Keep me signed in
-                </label>
+                </label> -->
 
                 <!-- <div class="btn-animate "> <a class="btn-signin">Sign in</a> </div> -->
 
-                <input type="submit" value="Sign in" class="mt-3 btn  btn-block btn-primary">
+                <input type="submit" name="login" value="Sign in" class="mt-3 btn  btn-block btn-primary">
             </form>
 
             <form class="form-signup" action="" method="post" name="form">

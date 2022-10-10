@@ -1,5 +1,12 @@
 <?php
     define('PAGE_TITLE', 'Home Page | Docx Physiotherapy ');
+    
+    //start session
+	session_start();
+ 
+	//redirect if logged in
+	if(isset($_SESSION['user'])):
+        
     include 'inc/header.php';
 
 ?>
@@ -315,3 +322,9 @@
 </div> <!-- .banner-home -->
 
 <?php include 'inc/footer.php';?>
+
+<?php else: 
+    
+    echo "Not Logged in"    
+?>
+<?php endif; ?>
