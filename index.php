@@ -5,7 +5,7 @@
 	session_start();
  
 	//redirect if logged in
-	if(isset($_SESSION['user'])):
+	// if(isset($_SESSION['user'])):
         
     include 'inc/header.php';
 
@@ -16,7 +16,7 @@
         <div class="container text-center wow zoomIn">
             <span class="subhead">Let's make your life happier</span>
             <h1 class="display-4">Healthy Living</h1>
-            <a href="contact.html" class="btn btn-primary">Let's Consult</a>
+            <a href="contact.php" class="btn btn-primary">Let's Consult</a>
         </div>
     </div>
 </div>
@@ -59,7 +59,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 py-3 wow fadeInUp">
-                    <h1>Welcome to Docx Physiotherapy <br> Center</h1>
+                    <h1>Welcome to Docx Club</h1>
                     <p class="text-grey mb-4">We provide Physiotherapy Home Sessions in Rwp & Isb (24/7).
                         For patients who are unable to come to clinic.
                         Our Qualified Physios are treating Disorders with latest Machines.
@@ -266,39 +266,47 @@
 </div> .page-section -->
 
 <div class="page-section">
-    <div class="container">
+    <div class="container" id="appoint">
         <h1 class="text-center wow fadeInUp">Make an Appointment</h1>
 
         <form class="main-form">
             <div class="row mt-5 ">
                 <div class="col-12 col-sm-6 py-2 wow fadeInLeft">
-                    <input type="text" class="form-control" placeholder="Full name">
+                    <input type="text" class="form-control" placeholder="Full name" required>
                 </div>
-                <div class="col-12 col-sm-6 py-2 wow fadeInRight">
+                <!-- <div class="col-12 col-sm-6 py-2 wow fadeInRight" required>
                     <input type="text" class="form-control" placeholder="Email address..">
-                </div>
-                <div class="col-12 col-sm-6 py-2 wow fadeInLeft" data-wow-delay="300ms">
+                </div> -->
+                <!-- <div class="col-12 col-sm-6 py-2 wow fadeInLeft" data-wow-delay="300ms">
                     <input type="date" class="form-control">
-                </div>
+                </div> -->
                 <div class="col-12 col-sm-6 py-2 wow fadeInRight" data-wow-delay="300ms">
+                    <input type="text" class="form-control" placeholder="Number.." required>
+                </div>
+                <div class="col-12 col-sm-6 py-2 wow fadeInUp" data-wow-delay="300ms">
+                    <input type="text" class="form-control" placeholder="Location" required>
+                </div>
+                <div class="col-12 col-sm-6 py-2 wow fadeInUp" data-wow-delay="300ms">
+                    <input type="text" class="form-control" placeholder="Sector" required>
+                </div>
+                <div class="col-12 py-2 wow fadeInRight" data-wow-delay="300ms">
                     <select name="departement" id="departement" class="custom-select">
-                        <option value="general">Home Physiotherapy</option>
-                        <option value="cardiology">Clinical Physiotherapy</option>
-                        <option value="dental">Nutritional Dite</option>
-                        <option value="neurology">Personal Gym Tranning</option>
-                        <option value="orthopaedics">Orthopaedics</option>
+                        <option value="general">Physiotherapy session</option>
+                        <option value="cardiology">Psychological session</option>
+                        <option value="dental">Diet and Nutrition</option>
+                        <option value="neurology">Personal Gym Training</option>
+                        <!-- <option value="orthopaedics">Orthopaedics</option> -->
                     </select>
                 </div>
-                <div class="col-12 py-2 wow fadeInUp" data-wow-delay="300ms">
-                    <input type="text" class="form-control" placeholder="Number..">
-                </div>
+
                 <div class="col-12 py-2 wow fadeInUp" data-wow-delay="300ms">
                     <textarea name="message" id="message" class="form-control" rows="6"
                         placeholder="Enter message.."></textarea>
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-primary mt-3 wow zoomIn">Submit Request</button>
+            <input type="submit" class="btn btn-primary mt-3 wow zoomIn" value="Submit">
+            <!-- <button type="submit" class="btn btn-primary mt-3 wow zoomIn">Submit Request</button> -->
         </form>
     </div>
 </div> <!-- .page-section -->
@@ -323,8 +331,11 @@
 
 <?php include 'inc/footer.php';?>
 
-<?php else: 
+<?php 
+    // else: 
     
-    echo "Not Logged in"    
+    // echo "Not Logged in"    
 ?>
-<?php endif; ?>
+<?php 
+    // endif; 
+?>

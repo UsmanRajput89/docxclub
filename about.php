@@ -54,7 +54,7 @@ include 'inc/header.php';
         <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 wow fadeInUp">
-            <h1 class="text-center mb-3">Welcome to Docx Physiotherapy Center</h1>
+            <h1 class="text-center mb-3">Welcome to Docx Club</h1>
             <div class="text-lg">
                 <p>We provide Physiotherapy Home Sessions in Rwp & Isb (24/7).
                 For patients who are unable to come to clinic.
